@@ -1,0 +1,2 @@
+class EventLangLink < ApplicationRecord
+end
