@@ -1,7 +1,7 @@
 <%= form_for(@event) do |f| %>
 	タイトル
-	<%= f.textfield :title %>
+	<%= f.text_field :title %>
 	内容
-	<%= f.textfield :body %>
+	<%= f.text_field :body %>
 	<%= f.submit "保存" %>
 <% end %>
