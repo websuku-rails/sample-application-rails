@@ -1,5 +1,5 @@
 class PinsController < ApplicationController
-	before_action :set_post, only:[:show, :edit, :update, :destroy, :correct_user]
+	before_action :set_pin, only:[:show, :edit, :update, :destroy, :correct_user]
 	before_action :authenticate_user!
 	before_action :correct_user, only:[:edit, :update, :destroy]
 
@@ -45,7 +45,7 @@ class PinsController < ApplicationController
 		params.require(:pin).permit(:title, :body)
 	end
 
-	def set_comment
+	def set_pin
 		@pin = Pin.find(params[:id])
 	end
 

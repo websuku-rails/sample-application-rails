@@ -1,5 +1,5 @@
 class JoinsController < ApplicationController
-	before_action :set_post, only:[:show, :edit, :update, :destroy, :correct_user]
+	before_action :set_join, only:[:show, :edit, :update, :destroy, :correct_user]
 	before_action :authenticate_user!
 	before_action :correct_user, only:[:edit, :update, :destroy]
 
@@ -45,7 +45,7 @@ class JoinsController < ApplicationController
 		params.require(:join).permit(:title, :body)
 	end
 
-	def set_comment
+	def set_join
 		@join = Join.find(params[:id])
 	end
 

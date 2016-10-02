@@ -1,5 +1,5 @@
 class EventController < ApplicationController
-	before_action :set_post, only:[:show, :edit, :update, :destroy, :correct_user]
+	before_action :set_event, only:[:show, :edit, :update, :destroy, :correct_user]
 	before_action :authenticate_user!
 	before_action :correct_user, only:[:edit, :update, :destroy]
 
@@ -45,7 +45,7 @@ class EventController < ApplicationController
 		params.require(:event).permit(:title, :body)
 	end
 
-	def set_comment
+	def set_event
 		@event = Event.find(params[:id])
 	end
 

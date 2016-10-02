@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-	before_action :set_post, only:[:show, :edit, :update, :destroy, :correct_user]
+	before_action :set_place, only:[:show, :edit, :update, :destroy, :correct_user]
 	before_action :authenticate_user!
 	before_action :correct_user, only:[:edit, :update, :destroy]
 
@@ -45,7 +45,7 @@ class PlacesController < ApplicationController
 		params.require(:place).permit(:name, :url, :price)
 	end
 
-	def set_comment
+	def set_place
 		@place = Place.find(params[:id])
 	end
 

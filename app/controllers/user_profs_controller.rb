@@ -1,5 +1,5 @@
 class UserProfsController < ApplicationController
-	before_action :set_post, only:[:show, :edit, :update, :destroy, :correct_user]
+	before_action :set_user_prof, only:[:show, :edit, :update, :destroy, :correct_user]
 	before_action :authenticate_user!
 	before_action :correct_user, only:[:edit, :update, :destroy]
 
@@ -45,7 +45,7 @@ class UserProfsController < ApplicationController
 		params.require(:user_prof).permit(:name, :age, :gender, :skillLevel, :introduction)
 	end
 
-	def set_comment
+	def set_user_prof
 		@user_prof = User_prof.find(params[:id])
 	end
 
