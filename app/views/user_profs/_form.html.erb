@@ -1,0 +1,9 @@
+<%= form_for(@user_prof) do |f| %>
+	コメント
+	<%= f.text_field :name %>
+	<%= f.text_field :age %>
+	<%= f.text_field :gender %>
+	<%= f.text_field :skillLevel %>
+	<%= f.text_field :introduction %>
+	<%= f.submit "保存" %>
+<% end %>

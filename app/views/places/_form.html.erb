@@ -1,0 +1,7 @@
+<%= form_for(@place) do |f| %>
+	コメント
+	<%= f.text_field :name %>
+	<%= f.text_field :price %>
+	<%= f.text_field :url %>
+	<%= f.submit "保存" %>
+<% end %>
