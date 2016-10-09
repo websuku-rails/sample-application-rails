@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161009104511) do
+ActiveRecord::Schema.define(version: 20161009111321) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "body"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20161009104511) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.boolean  "join_permit"
+    t.integer  "user_id"
   end
 
   create_table "joins", force: :cascade do |t|
@@ -66,6 +67,7 @@ ActiveRecord::Schema.define(version: 20161009104511) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "place_id"
+    t.integer  "user_id"
   end
 
   create_table "statics", force: :cascade do |t|
@@ -88,6 +90,7 @@ ActiveRecord::Schema.define(version: 20161009104511) do
     t.string   "introduction"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|

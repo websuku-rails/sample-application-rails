@@ -8,7 +8,8 @@ class UserProfsController < ApplicationController
 	end
 
 	def create
-		@user_prof = UserProf.new(post_params)
+
+		@user_prof = UserProf.new(user_prof_params)
 		@user_prof.user_id = current_user.id
 		if @user_prof.save
 			redirect_to @user_prof, notice: "投稿しました"
@@ -41,7 +42,7 @@ class UserProfsController < ApplicationController
 	end
 
 	private
-	def post_params
+	def user_prof_params
 		params.require(:user_prof).permit(:name, :age, :gender, :skillLevel, :introduction)
 	end
 
