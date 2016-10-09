@@ -3,7 +3,7 @@ class EventsController < ApplicationController
 	before_action :authenticate_user!
 	before_action :correct_user, only:[:edit, :update, :destroy]
 
-	def new 
+	def new
 		@event = Event.new(@event)
 	end
 
@@ -49,7 +49,7 @@ class EventsController < ApplicationController
 		@event = Event.find(params[:id])
 	end
 
-	def correct_user 
+	def correct_user
 		if current_user.id != @event.user_id
 			redirect_to root_path
 		end

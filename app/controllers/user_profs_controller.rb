@@ -3,12 +3,12 @@ class UserProfsController < ApplicationController
 	before_action :authenticate_user!
 	before_action :correct_user, only:[:edit, :update, :destroy]
 
-	def new 
-		@user_prof = User_prof.new(@user_prof)
+	def new
+		@user_prof = UserProf.new(@user_prof)
 	end
 
 	def create
-		@user_prof = User_prof.new(post_params)
+		@user_prof = UserProf.new(post_params)
 		@user_prof.user_id = current_user.id
 		if @user_prof.save
 			redirect_to @user_prof, notice: "投稿しました"
@@ -18,7 +18,7 @@ class UserProfsController < ApplicationController
 	end
 
 	def index
-		@user_profs = User_prof.all
+		@user_profs = UserProf.all
 	end
 
 	def show
@@ -46,10 +46,10 @@ class UserProfsController < ApplicationController
 	end
 
 	def set_user_prof
-		@user_prof = User_prof.find(params[:id])
+		@user_prof = UserProf.find(params[:id])
 	end
 
-	def correct_user 
+	def correct_user
 		if current_user.id != @user_prof.user_id
 			redirect_to root_path
 		end
