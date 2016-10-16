@@ -1,2 +1,41 @@
-<h1>Static#home</h1>
-<p>Find me in app/views/static/home.html.erb</p>
+<div id="wrap">
+  <h1>Static#home</h1>
+  <p>Find me in app/views/static/home.html.erb</p>
+</div>
+
+<div class="second-wrapper">
+  <div class="circle-loader">
+      <div class="circle circle_four"></div>
+      <div class="circle circle_three"></div>
+      <div class="circle circle_two"></div>
+      <div class="circle circle_one"></div>
+  </div>
+</div>
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(function(){
+
+  $('#wrap').css('display','none');
+  $('.second-wrapper, .circle-loader').css('display','flex');
+});
+
+$(window).load(function () { //全ての読み込みが完了したら実行
+  $('.second-wrapper').delay(900).fadeOut(800);
+  $('.circle-loader').delay(600).fadeOut(300);
+  $('#wrap').css('display', 'block');
+});
+
+//10秒たったら強制的にロード画面を非表示
+$(function(){
+  setTimeout('stopload()',10000);
+});
+
+function stopload(){
+  $('#wrap').css('display','block');
+  $('.second-wrapper').delay(900).fadeOut(800);
+  $('.circle-loader').delay(600).fadeOut(300);
+}
+</script>
