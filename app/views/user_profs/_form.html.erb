@@ -1,9 +1,18 @@
 <%= form_for(@user_prof) do |f| %>
-	コメント
+
+	<p>name</p>
 	<%= f.text_field :name %>
+
+	<p>age</p>
 	<%= f.number_field :age %>
+
+	<p>gender</p>
 	<%= f.number_field :gender %>
+
+	<p>skill</p>
 	<%= f.number_field :skillLevel %>
+
+	<p>自己紹介</p>
 	<%= f.text_field :introduction %>
 	<%= f.submit "保存" %>
 <% end %>

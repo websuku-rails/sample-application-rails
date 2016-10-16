@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :pins
   resources :places
   resources :user_profs
+  get 'check_user_prof', to: 'user_profs#check'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

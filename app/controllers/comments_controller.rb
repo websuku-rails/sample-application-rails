@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
 	before_action :authenticate_user!
 	before_action :correct_user, only:[:edit, :update, :destroy]
 
-	def new 
+	def new
 		@comment = Comment.new(@comment)
 	end
 
@@ -49,7 +49,7 @@ class CommentsController < ApplicationController
 		@comment = Comment.find(params[:id])
 	end
 
-	def correct_user 
+	def correct_user
 		if current_user.id != @comment.user_id
 			redirect_to root_path
 		end
