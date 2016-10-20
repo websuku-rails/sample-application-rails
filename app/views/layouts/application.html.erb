@@ -3,9 +3,9 @@
   <head>
     <title>RailsProject</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.5/jquery.bxslider.css" media="screen" title="no title">
+
   </head>
 
   <body>
@@ -38,5 +38,6 @@
     <p class="alert"><%= alert %></p>
 
     <%= yield %>
+    <%= javascript_include_tag 'https://cdn.jsdelivr.net/bxslider/4.2.5/jquery.bxslider.js' %>
   </body>
 </html>

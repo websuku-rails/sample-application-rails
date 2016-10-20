@@ -1,0 +1,466 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+
+ */
+
+/**
+ * bxSlider v4.2.5
+ * Copyright 2013-2015 Steven Wanderski
+ * Written while drinking Belgian ales and listening to jazz
+
+ * Licensed under MIT (http://opensource.org/licenses/MIT)
+ */
+/** VARIABLES 
+===================================*/
+/** RESET AND LAYOUT
+===================================*/
+/* line 14, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper {
+  position: relative;
+  margin: 0 auto 60px;
+  padding: 0;
+  *zoom: 1;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+
+/* line 22, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper img {
+  max-width: 100%;
+  display: block;
+}
+
+/* line 26, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bxslider {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 30, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+ul.bxslider {
+  list-style: none;
+}
+
+/* line 33, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-viewport {
+  /*fix other elements on the page moving (on Chrome)*/
+  -webkit-transform: translatez(0);
+}
+
+/** THEME
+===================================*/
+/* line 39, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper {
+  -moz-box-shadow: 0 0 5px #ccc;
+  -webkit-box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px #ccc;
+  border: 5px solid #fff;
+  background: #fff;
+}
+
+/* line 46, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+
+/* LOADER */
+/* line 53, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-loading {
+  min-height: 50px;
+  background: url(/assets/bx_loader-6d46e2cf165a5a0584afba7bc9663da292ee08c97cfc7613de6013ed05be892a.gif) center center no-repeat #ffffff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
+/* PAGER */
+/* line 64, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-pager {
+  text-align: center;
+  font-size: .85em;
+  font-family: Arial;
+  font-weight: bold;
+  color: #666;
+  padding-top: 20px;
+}
+
+/* line 72, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #666;
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  outline: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 84, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+  background: #000;
+}
+
+/* line 89, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+
+/* line 95, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-pager-item {
+  font-size: 0;
+  line-height: 0;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+/* line 100, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-prev {
+  left: 10px;
+  background: url(/assets/controls-257206c4fd6bcee36927eb0ef2ba087b5dfc6c9a18df7f8553878bf847616226.png) no-repeat 0 -32px;
+}
+
+/* line 104, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus {
+  background-position: 0 0;
+}
+
+/* line 108, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-next {
+  right: 10px;
+  background: url(/assets/controls-257206c4fd6bcee36927eb0ef2ba087b5dfc6c9a18df7f8553878bf847616226.png) no-repeat -43px -32px;
+}
+
+/* line 112, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus {
+  background-position: -43px 0;
+}
+
+/* line 116, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-controls-direction a {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  outline: 0;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+
+/* line 126, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-controls-direction a.disabled {
+  display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+/* line 130, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-controls-auto {
+  text-align: center;
+}
+
+/* line 133, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-controls-auto .bx-start {
+  display: block;
+  text-indent: -9999px;
+  width: 10px;
+  height: 11px;
+  outline: 0;
+  background: url(/assets/controls-257206c4fd6bcee36927eb0ef2ba087b5dfc6c9a18df7f8553878bf847616226.png) -86px -11px no-repeat;
+  margin: 0 3px;
+}
+
+/* line 142, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active,
+.bx-wrapper .bx-controls-auto .bx-start:focus {
+  background-position: -86px 0;
+}
+
+/* line 147, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-controls-auto .bx-stop {
+  display: block;
+  text-indent: -9999px;
+  width: 9px;
+  height: 11px;
+  outline: 0;
+  background: url(/assets/controls-257206c4fd6bcee36927eb0ef2ba087b5dfc6c9a18df7f8553878bf847616226.png) -86px -44px no-repeat;
+  margin: 0 3px;
+}
+
+/* line 156, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active,
+.bx-wrapper .bx-controls-auto .bx-stop:focus {
+  background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+/* line 162, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+  text-align: left;
+  width: 80%;
+}
+
+/* line 166, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+  right: 0;
+  width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+/* line 171, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666;
+  background: rgba(80, 80, 80, 0.75);
+  width: 100%;
+}
+
+/* line 179, /home/vagrant/.rvm/gems/ruby-2.2.3/gems/bxslider-rails-4.2.5.1/vendor/assets/stylesheets/bxslider.css.scss */
+.bx-wrapper .bx-caption span {
+  color: #fff;
+  font-family: Arial;
+  display: block;
+  font-size: .85em;
+  padding: 10px;
+}
+/* line 5, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+===================
+||  application  ||
+===================
+*/
+/* line 17, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+header {
+  height: 20vh;
+  background-color: #e8c253;
+}
+
+/*
+===================
+||  static-home  ||
+===================
+*/
+/* line 28, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+#wrap {
+  background-color: #007bbb;
+  display: flex;
+}
+/* line 31, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+#wrap .content {
+  width: 100vw;
+  height: 100vh;
+}
+/* line 35, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+#wrap .visual {
+  height: 80vh;
+  background-image: url(desktop-1155613_1920.jpg);
+}
+/* line 39, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+#wrap .slide-1 {
+  display: flex;
+}
+/* line 42, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+#wrap .slide-1 .left .main-view {
+  width: 60vw;
+  height: 60vh;
+  background-color: #e8c253;
+  margin-bottom: 10vh;
+}
+/* line 48, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+#wrap .slide-1 .left .pragraf {
+  width: 60vw;
+  height: 30vh;
+  background-color: #e8c253;
+}
+/* line 55, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+#wrap .slide-1 .right .img-container {
+  width: 40vw;
+  height: 70vh;
+  background-color: #e9ecaa;
+}
+/* line 62, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+#wrap .slide-2 {
+  background-image: url(computer-336628_1280.jpg);
+}
+/* line 64, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+#wrap .slide-2 .top {
+  height: 50vh;
+  border-bottom: 10vh solid #e9ecaa;
+  background-color: rgba(0, 77, 121, 0.5);
+}
+/* line 70, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+#wrap .slide-2 .bottom {
+  height: 50vh;
+  border-right: 10vw solid #e9ecaa;
+  background-color: rgba(232, 194, 83, 0.5);
+}
+/* line 77, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+#wrap .slide-3 {
+  display: flex;
+}
+/* line 79, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+#wrap .slide-3 .left {
+  width: 70vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 86, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+#wrap .slide-3 .left .cafe {
+  width: 50vw;
+}
+/* line 90, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+#wrap .slide-3 .right {
+  width: 30vw;
+  height: 100vh;
+  background-color: #e8c253;
+}
+/* line 96, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+#wrap .slide-4 {
+  background-image: url(office-620817_1920);
+}
+/* line 98, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+#wrap .slide-4 .bg-filter {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 77, 121, 0.9);
+  display: flex;
+  justify-content: flex-end;
+}
+/* line 104, /vagrant/workspace/rails/app/assets/stylesheets/custom.css.scss */
+#wrap .slide-4 .bg-filter .bach1 {
+  width: 0;
+  height: 0;
+  border-top: 50vh solid transparent;
+  border-right: 50vh solid #e9ecaa;
+  border-left: 50vh solid transparent;
+  border-bottom: 50vh solid #e8c253;
+}
+/*
+||*=================*||
+||*loading-animation*||
+||*=================*||
+*/
+/* line 14, /vagrant/workspace/rails/app/assets/stylesheets/roading.css.scss */
+div[class*=wrapper] {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 22, /vagrant/workspace/rails/app/assets/stylesheets/roading.css.scss */
+div[class*=loader] {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+/*
+=======================
+   Circle Preloader
+=======================
+*/
+/* line 33, /vagrant/workspace/rails/app/assets/stylesheets/roading.css.scss */
+.second-wrapper {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #e8c253;
+}
+
+/* line 41, /vagrant/workspace/rails/app/assets/stylesheets/roading.css.scss */
+.circle-loader {
+  position: relative;
+}
+
+/* line 45, /vagrant/workspace/rails/app/assets/stylesheets/roading.css.scss */
+.circle {
+  border-radius: 50% 50% 50% 50%;
+  position: absolute;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid #fff;
+  border-right: 2px solid transparent;
+  animation: animate 2s infinite;
+}
+
+/* line 55, /vagrant/workspace/rails/app/assets/stylesheets/roading.css.scss */
+.circle_one {
+  left: 75px;
+  top: 75px;
+  width: 50px;
+  height: 50px;
+}
+
+/* line 62, /vagrant/workspace/rails/app/assets/stylesheets/roading.css.scss */
+.circle_two {
+  left: 65px;
+  top: 65px;
+  width: 70px;
+  height: 70px;
+  animation-delay: 0.2s;
+}
+
+/* line 70, /vagrant/workspace/rails/app/assets/stylesheets/roading.css.scss */
+.circle_three {
+  left: 55px;
+  top: 55px;
+  width: 90px;
+  height: 90px;
+  animation-delay: 0.4s;
+}
+
+/* line 78, /vagrant/workspace/rails/app/assets/stylesheets/roading.css.scss */
+.circle_four {
+  left: 45px;
+  top: 45px;
+  width: 110px;
+  height: 110px;
+  animation-delay: 0.6s;
+}
+
+@keyframes animate {
+  50% {
+    transform: rotate(360deg) scale(0.8);
+  }
+}

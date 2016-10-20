@@ -1,0 +1,120 @@
+// Place all the styles related to the comment controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+===================
+||  application  ||
+===================
+*/
+
+header {
+  height: 20vh;
+  background-color: #e8c253;
+}
+
+/*
+===================
+||  static-home  ||
+===================
+*/
+
+#wrap {
+  background-color: #007bbb;
+  display: flex;
+  .content {
+    width: 100vw;
+    height: 100vh;
+  }
+  .visual {
+    height: 80vh;
+    background-image: url(desktop-1155613_1920.jpg);
+    background-size: cover;
+  }
+  li {
+    list-style-type: none;
+  }
+  .slide-1 {
+    display: flex;
+    .left {
+      .main-view {
+        width: 60vw;
+        height: 60vh;
+        background-color: #e8c253;
+        margin-bottom: 10vh;
+      }
+      .pragraf {
+        width: 60vw;
+        height: 30vh;
+        background-color: #e8c253;
+      }
+    }
+    .right {
+      .img-container {
+        width: 40vw;
+        height: 70vh;
+        background-color: #e9ecaa;
+      }
+    }
+  }
+  .slide-2 {
+    background-image: url(computer-336628_1280.jpg);
+    background-size: cover;
+    .top {
+      height: 50vh;
+
+      border-bottom: 10vh solid #e9ecaa;
+      background-color: rgba(0, 77, 121, .5);
+    }
+    .bottom {
+      height: 50vh;
+      border-right: 10vw solid #e9ecaa;
+      background-color: rgba(232, 194, 83, .5);
+
+    }
+  }
+  .slide-3 {
+    display: flex;
+    .left {
+      width: 70vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .cafe {
+        width: 50vw;
+      }
+    }
+    .right {
+      width: 30vw;
+      height: 100vh;
+      background-color: #e8c253;
+    }
+  }
+  .slide-4 {
+    background-image: url(office-620817_1920);
+    background-size: cover;
+    .bg-filter {
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 77, 121, .9);
+      display: flex;
+      justify-content: flex-end;
+      .bach1 {
+        width: 0;
+        height: 0;
+        border-top: 50vh solid transparent;
+        border-right: 50vh solid #e9ecaa;
+      	border-left:  50vh solid transparent;
+      	border-bottom: 50vh solid #e8c253;
+      }
+    }
+  }
+}

@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
-
+# use jquery-turbolinks
+gem 'jquery-turbolinks'
+# fullpage-rails
+gem 'fullpage-rails'
+# bxslider-rails
+gem 'bxslider-rails'
 # devese
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

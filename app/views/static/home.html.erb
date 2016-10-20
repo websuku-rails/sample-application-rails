@@ -1,6 +1,53 @@
+<style>
+header {
+  display:none;
+}
+</style>
 <div id="wrap">
-  <h1>Static#home</h1>
-  <p>Find me in app/views/static/home.html.erb</p>
+  <ul class="bxslider">
+
+    <li>
+      <div class="visual"></div>
+    </li>
+
+    <li>
+      <section class="content slide-1">
+        <div class="left">
+          <div class="main-view"></div>
+          <div class="pragraf"></div>
+        </div>
+        <div class="right">
+            <%= image_tag 'workstation-336369_1920.jpg', class: 'img-container' %>
+        </div>
+      </section>
+    </li>
+
+    <li>
+      <section class="content slide-2">
+        <div class="top"></div>
+        <div class="line"></div>
+        <div class="bottom"></div>
+      </section>
+    <li>
+
+    <li>
+      <section class="content slide-3">
+        <div class="left">
+          <%= image_tag 'cup-661972_1920.png', class: 'cafe'%>
+        </div>
+        <div class="right"></div>
+      </section>
+    </li>
+
+    <li>
+      <section class="content slide-4">
+        <div class="bg-filter">
+          <div class="bach1"></div>
+        </div>
+      </section>
+    </li>
+
+  </ul>
 </div>
 
 <div class="second-wrapper">
@@ -38,4 +85,15 @@ function stopload(){
   $('.second-wrapper').delay(900).fadeOut(800);
   $('.circle-loader').delay(600).fadeOut(300);
 }
+</script>
+
+<script>
+  $(document).ready(function(){
+    $('.bxslider').bxSlider({
+      mode: 'vertical',
+      hideControlOnEnd: false,
+      controls: false,
+      autoControls: true,
+    });
+  });
 </script>
