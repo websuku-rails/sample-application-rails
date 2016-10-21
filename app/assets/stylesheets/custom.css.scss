@@ -2,10 +2,47 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+/*
+===================
+||      素材      ||
+===================
+*/
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+// back-color
+.back-blue {
+  background-color: #007bbb;
+}
+.back-orange {
+  background-color: #e8c253;
+}
+.back-yellow {
+  background-color: #e9ecaa;
+}
+
+// flex
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.flex-left {
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+}
+.flex-right {
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
 }
 
 /*
@@ -25,36 +62,30 @@ header {
 ===================
 */
 
-.back-blue {
-  background-color: #007bbb;
-}
-.back-orange {
-  background-color: #e8c253;
-}
-.back-yellow {
-  background-color: #e9ecaa;
-}
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.icon-box-center {
-  margin: 0 10vw;
-}
-
 .button {
+  font-size: 2rem;
   padding: 20px;
-  border: none;
+  border-radius: 20px;
+  font-family: 'Black Ops One', cursive;
+}
+.button-text {
+  color: black;
+  text-decoration: none;
 }
 
+// 全体の指定
 #wrap {
+  font-family: 'Noto Sans Japanese';
+  font-size: 1.5rem;
+  font-weight: 100;
   background-color: #007bbb;
   height: 100vh;
   display: flex;
   li {
     list-style-type: none;
+  }
+  .icon-box-center {
+    margin: 0 10vw;
   }
   .content {
     width: 100vw;
@@ -64,41 +95,38 @@ header {
       padding: 5vw;
       .section-title {
         text-decoration: underline;
-        font-size: 3em;
+        font-size: 3.5rem;
         line-height: 1.5;
         font-family: 'Bungee Hairline', cursive;
       }
     }
   }
+
+  // 個別の大きさ
+  // visual
   .visual {
-    width: 100vw;
-    height: 100vh;
     background-image: url(desktop-1155613_1920.jpg);
     background-size: cover;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
     .content-box {
       margin-right: 20vw;
       .site-title {
-        font-size: 5em;
-        line-height: 1.5;
+        font-size: 5rem;
         font-family: 'Bungee Hairline', cursive;
       }
     }
   }
+
+  // slide1
   .slide-1 {
     display: flex;
     .left {
       .main-view {
         width: 60vw;
         height: 55vh;
-        background-color: #e8c253;
       }
       .pragraf {
         width: 60vw;
         height: 45vh;
-        background-color: #e9ecaa;
       }
     }
     .right {
@@ -112,12 +140,13 @@ header {
       }
     }
   }
+
+  // slide2
   .slide-2 {
     background-image: url(computer-336628_1280.jpg);
     background-size: cover;
     .top {
       height: 50vh;
-
       border-bottom: 10vh solid #e9ecaa;
       background-color: rgba(0, 77, 121, .5);
     }
@@ -126,44 +155,43 @@ header {
       padding-left: 10vw;
       border-right: 10vw solid #e9ecaa;
       background-color: rgba(232, 194, 83, .5);
-
     }
   }
+
+  // slide3
   .slide-3 {
     display: flex;
     .left {
-      width: 70vw;
+      width: 60vw;
       height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
       .cafe {
         width: 50vw;
       }
     }
     .right {
-      width: 30vw;
+      width: 40vw;
       height: 100vh;
-      background-color: #e8c253;
     }
   }
+
+  // slide4
   .slide-4 {
     background-image: url(office-620817_1920);
     background-size: cover;
     .bg-filter {
       width: 100vw;
       height: 100vh;
-      background-color: rgba(0, 77, 121, .9);
-      display: flex;
-      justify-content: flex-end;
+      background-color: rgba(0, 77, 121, .5);
+      .button {
+        margin-top: 10vh;
+      }
       .bach1 {
         width: 0;
         height: 0;
         border-top: 50vh solid transparent;
-        border-right: 50vh solid #e9ecaa;
+        border-right: 50vh solid #e8c253;
       	border-left:  50vh solid transparent;
-      	border-bottom: 50vh solid #e8c253;
+      	border-bottom: 50vh solid #e9ecaa;
       }
     }
   }

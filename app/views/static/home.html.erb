@@ -7,7 +7,7 @@ header {
   <ul class="bxslider">
 
     <li>
-      <div class="content visual">
+      <div class="content visual flex-right">
         <div class="content-box back-orange">
           <h1 class="site-title">CAFFE<br>SPACE</h1>
           <p>カフェの空きを探すサイトです</p>
@@ -18,7 +18,7 @@ header {
     <li>
       <section class="content slide-1">
         <div class="left">
-          <div class="main-view flex-center">
+          <div class="main-view flex-center back-orange">
             <section class="content-box back-yellow">
               <h2 class="section-title">ABOUT</h2>
               <p>
@@ -28,7 +28,7 @@ header {
               </p>
             </section>
           </div>
-          <div class="pragraf flex-center">
+          <div class="pragraf flex-center back-yellow">
             <p>
               渋谷駅近辺の作業ができるカフェを管理しています。<br>
               ユーザー同士で混み具合の情報を共有することもできます。<br>
@@ -39,9 +39,9 @@ header {
         <div class="right">
             <%= image_tag 'workstation-336369_1920.jpg', class: 'img-container' %>
             <div class="back-blue button-box flex-center">
-              <button class="back-orange button">
-                カフェ一覧を見る
-              </button>
+              <div class="back-orange button">
+                LOCK MORE CAFFES!!
+              </div>
             </div>
         </div>
       </section>
@@ -76,21 +76,39 @@ header {
 
     <li>
       <section class="content slide-3">
-        <div class="left">
+        <div class="left flex-center">
           <%= image_tag 'cup-661972_1920.png', class: 'cafe'%>
         </div>
-        <div class="right"></div>
+        <div class="right flex-left back-orange">
+          <div class="content-box">
+            <h2 class="section-title">CAFFE</h2>
+            <p>
+              カフェの情報を管理しています。<br>
+              混み具合、席数、予算などです。<br>
+              お役立てください。
+            </p>
+          </div>
+        </div>
       </section>
     </li>
 
     <li>
       <section class="content slide-4">
-        <div class="bg-filter">
+        <div class="bg-filter flex-right">
+          <div class="">
+            <div class="content-box">
+              <h2 class="section-title">LET'S JOIN</h2>
+              <p>便利さを体感してください</p>
+              <div class="button back-orange">
+                <%= link_to "SIGN UP NOW!!", new_user_session_path, class: "button-text" %>
+              </div>
+            </div>
+
+          </div>
           <div class="bach1"></div>
         </div>
       </section>
     </li>
-
   </ul>
 </div>
 
