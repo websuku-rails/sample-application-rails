@@ -40,6 +40,10 @@ header {
   align-items: center;
 }
 
+.icon-box-center {
+  margin: 0 10vw;
+}
+
 .button {
   padding: 20px;
   border: none;
@@ -59,6 +63,7 @@ header {
       text-align: center;
       padding: 5vw;
       .section-title {
+        text-decoration: underline;
         font-size: 3em;
         line-height: 1.5;
         font-family: 'Bungee Hairline', cursive;
@@ -118,6 +123,7 @@ header {
     }
     .bottom {
       height: 50vh;
+      padding-left: 10vw;
       border-right: 10vw solid #e9ecaa;
       background-color: rgba(232, 194, 83, .5);
 
