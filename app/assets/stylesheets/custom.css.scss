@@ -25,41 +25,85 @@ header {
 ===================
 */
 
+.back-blue {
+  background-color: #007bbb;
+}
+.back-orange {
+  background-color: #e8c253;
+}
+.back-yellow {
+  background-color: #e9ecaa;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  padding: 20px;
+  border: none;
+}
+
 #wrap {
   background-color: #007bbb;
+  height: 100vh;
   display: flex;
+  li {
+    list-style-type: none;
+  }
   .content {
     width: 100vw;
     height: 100vh;
+    .content-box {
+      text-align: center;
+      padding: 5vw;
+      .section-title {
+        font-size: 3em;
+        line-height: 1.5;
+        font-family: 'Bungee Hairline', cursive;
+      }
+    }
   }
   .visual {
-    height: 80vh;
+    width: 100vw;
+    height: 100vh;
     background-image: url(desktop-1155613_1920.jpg);
     background-size: cover;
-  }
-  li {
-    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .content-box {
+      margin-right: 20vw;
+      .site-title {
+        font-size: 5em;
+        line-height: 1.5;
+        font-family: 'Bungee Hairline', cursive;
+      }
+    }
   }
   .slide-1 {
     display: flex;
     .left {
       .main-view {
         width: 60vw;
-        height: 60vh;
+        height: 55vh;
         background-color: #e8c253;
-        margin-bottom: 10vh;
       }
       .pragraf {
         width: 60vw;
-        height: 30vh;
-        background-color: #e8c253;
+        height: 45vh;
+        background-color: #e9ecaa;
       }
     }
     .right {
       .img-container {
         width: 40vw;
         height: 70vh;
-        background-color: #e9ecaa;
+      }
+      .button-box {
+        width: 40vw;
+        height: 30vh;
       }
     }
   }

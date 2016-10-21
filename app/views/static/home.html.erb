@@ -7,17 +7,42 @@ header {
   <ul class="bxslider">
 
     <li>
-      <div class="visual"></div>
+      <div class="content visual">
+        <div class="content-box back-orange">
+          <h1 class="site-title">CAFEE<br>SPACE</h1>
+          <p>カフェの空きを探すサイトです</p>
+        </div>
+      </div>
     </li>
 
     <li>
       <section class="content slide-1">
         <div class="left">
-          <div class="main-view"></div>
-          <div class="pragraf"></div>
+          <div class="main-view flex-center">
+            <section class="content-box back-yellow">
+              <h2 class="section-title">ABOUT</h2>
+              <p>
+                カフェはいつも混雑しています。<br>
+                勉強したくても、場所がとれません。<br>
+                その悲しみに終止符を。
+              </p>
+            </section>
+          </div>
+          <div class="pragraf flex-center">
+            <p>
+              渋谷駅近辺の作業ができるカフェを管理しています。<br>
+              ユーザー同士で混み具合の情報を共有することもできます。<br>
+              きれいなカフェで、快適な時間をお過ごしください。
+            </p>
+          </div>
         </div>
         <div class="right">
             <%= image_tag 'workstation-336369_1920.jpg', class: 'img-container' %>
+            <div class="back-blue button-box flex-center">
+              <button class="back-orange button">
+                カフェ一覧を見る
+              </button>
+            </div>
         </div>
       </section>
     </li>
@@ -28,7 +53,7 @@ header {
         <div class="line"></div>
         <div class="bottom"></div>
       </section>
-    <li>
+    </li>
 
     <li>
       <section class="content slide-3">
@@ -59,13 +84,10 @@ header {
   </div>
 </div>
 
-
-
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
 $(function(){
 
-  $('#wrap').css('display','none');
   $('.second-wrapper, .circle-loader').css('display','flex');
 });
 
